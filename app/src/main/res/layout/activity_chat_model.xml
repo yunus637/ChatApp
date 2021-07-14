@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:id="@+id/toolbartext"
-            android:text="NAME"
+            android:text="@string/name"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -65,27 +65,28 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:src="@drawable/ic_baseline_camera_alt_24"
-            android:layout_marginLeft="8dp" />
+            android:layout_marginStart="8dp" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:id="@+id/sendmessage"
             app:layout_constraintLeft_toRightOf="@+id/camera"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="40dp"
+            android:layout_marginEnd="40dp"
             android:background="@drawable/shape_image"
             android:layout_marginBottom="8dp"
-            android:hint="Start typing..."
-            android:padding="10dp" />
+            android:hint="@string/start_typing"
+            android:padding="8dp" />
         <ImageView
             android:layout_width="35dp"
             android:layout_height="50dp"
+            android:id="@+id/sendicon"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:src="@drawable/ic_baseline_send_24"
             android:layout_marginBottom="1dp" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

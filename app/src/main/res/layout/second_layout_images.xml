@@ -24,7 +24,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seccard"
         android:textStyle="bold"
-        android:text="asdas"
+        android:text="@string/testing1"
         app:layout_constraintRight_toRightOf="parent"
         android:textSize="14sp"/>
 

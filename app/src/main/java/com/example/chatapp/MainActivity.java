@@ -17,12 +17,12 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView, recyclerView2;
-    private String[] names = {"Frank Martin", "Instamobile Team", "Frank", "Marta Popaes", "Frank", "Francis Soprano", "Jose Gonzales", "The Group Chat"};
-    private int[] images = {R.drawable.p1, R.drawable.p2, R.drawable.p1, R.drawable.p3, R.drawable.p4, R.drawable.p5, R.drawable.p6, R.drawable.p7};
-    private String[] lastmessages = {"This is so good", "Thanks for everything", "Ohh my God", "Wow that is beautiful", "See you soon!", "I miss you", "I want to see you", "Thanks All"};
+    private final String[] names = {"Frank Martin", "Instamobile Team", "Frank", "Marta Popaes", "Frank", "Francis Soprano", "Jose Gonzales","The Group Chat","Samie","Anthon","James"};
+    private final int[] images = {R.drawable.p1, R.drawable.p2, R.drawable.p1, R.drawable.p3, R.drawable.p4, R.drawable.p5, R.drawable.p6, R.drawable.p7,R.drawable.p9,R.drawable.p10,R.drawable.p11};
+    private final String[] lastmessages = {"This is so good", "Thanks for everything", "Ohh my God", "Wow that is beautiful", "See you soon!", "I miss you", "I want to see you", "Thanks All","Hey how are you?","What are you doing?","I will work get new job inshAllah"};
     private ViewAdapter viewAdapter;
     private SecondAdapter secondAdapter;
-    private String[] names1 = {"Frank", "Marta", "Theresa", "Francis", "Frank"};
+    private final String[] names1 = {"Frank", "Marta", "Theresa", "Francis", "Narmin"};
     private Toolbar toolbar;
     private ImageView imageView;
     private  EditText searchtext;

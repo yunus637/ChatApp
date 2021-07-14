@@ -1,4 +1,5 @@
 package com.example.chatapp;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,15 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
-    private String[] messages;
-    private Context context;
-    private int personphoto;
-
+    private final String[] messages;
+    private final Context context;
+    private final int personphoto;
     public ChatAdapter(String[] messages,int personphoto,Context context) {
         this.messages = messages;
         this.context=context;
         this.personphoto=personphoto;
+
     }
+    @SuppressLint("InflateParams")
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,7 +36,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
        if(position%2==0){
            holder.sender.setText(messages[position]);
-         if(holder.receiverimage!=null){
+           if(holder.receiverimage!=null){
              holder.receiverimage.setBackgroundResource(R.drawable.p8me);
          }
        }
@@ -45,15 +47,15 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
            }
        }
     }
-
     @Override
     public int getItemCount() {
-        return messages.length;
-    }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView sender,receiver;
-        private ImageView senderimage,receiverimage;
+            return messages.length;
+
+    }
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private final TextView sender,receiver;
+        private final ImageView senderimage,receiverimage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             sender=itemView.findViewById(R.id.sender_text);
@@ -61,7 +63,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
             senderimage= (ImageView) itemView.findViewById(R.id.sender_image1);
             receiverimage= itemView.findViewById(R.id.receiver_image);
         }
-
     }
     @Override
     public int getItemViewType(int position) {

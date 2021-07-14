@@ -4,15 +4,15 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:id="@+id/imagecard"
-        app:cardCornerRadius="60dp"
+        app:cardCornerRadius="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:id="@+id/imageofpeople"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/nameofpeople"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="NAME"
+        android:text="@string/name1"
         app:layout_constraintLeft_toRightOf="@+id/imagecard"
         android:textStyle="bold|normal"
         android:textSize="15sp"
@@ -37,7 +37,7 @@
         android:id="@+id/lastmessage"
         android:ellipsize="end"
         android:maxLines="1"
-        android:text="Thanks for Every sadsad asasds dasd asdasd sa dsad ada asdas"
+        android:text="@string/Teststring"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imagecard"

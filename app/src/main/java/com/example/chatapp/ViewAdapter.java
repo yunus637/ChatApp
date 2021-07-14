@@ -1,5 +1,6 @@
 package com.example.chatapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,9 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.RowHolder> {
-    private  String [] names,messages;
-    private  int [] images;
-    private Context context;
+    private  final String [] names,messages;
+    private  final int [] images;
+    private final Context context;
 
     public ViewAdapter(String [] names,String [] messages,int [] images,Context context){
         this.images=images;
@@ -25,7 +26,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.RowHolder> {
     @Override
     public RowHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater=LayoutInflater.from(context);
-        View view=layoutInflater.inflate(R.layout.names_layout,null);
+        @SuppressLint("InflateParams") View view=layoutInflater.inflate(R.layout.names_layout,null);
         return new RowHolder(view);
     }
     @Override
@@ -48,9 +49,9 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.RowHolder> {
     public int getItemCount() {
         return images.length;
     }
-    public class RowHolder extends RecyclerView.ViewHolder {
-        private TextView nameofpeople,lastmessage;
-        private ImageView imageofperson;
+    public static class RowHolder extends RecyclerView.ViewHolder {
+        private final TextView nameofpeople,lastmessage;
+        private final ImageView imageofperson;
         public RowHolder(@NonNull View itemView) {
             super(itemView);
             nameofpeople=itemView.findViewById(R.id.nameofpeople);
